@@ -26,6 +26,18 @@ jobs:
       - uses: actions/checkout@v4
 
       # Runs a single command using the runners shell
+      - name: custom test1
+        uses : org/custom-action/.github/action1/@master
+        with :
+          x: 10
+          y: 5
+
+      - name: custom test2
+        uses : org/custom-action/.github/action2/@master
+        with:
+          x: 10
+          y: 5
+
       - name: run
         id : run
         run: |
