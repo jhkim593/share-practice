@@ -27,6 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: run
+        id : run
         run: echo "test=h11111" >> $GITHUB_OUTPUT
 
 
