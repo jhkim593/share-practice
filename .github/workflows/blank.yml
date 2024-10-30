@@ -27,13 +27,13 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: custom test1
-        uses : org/custom-action/.github/action1/@master
+        uses : custom-action/.github/action1/@master
         with :
           x: 10
           y: 5
 
       - name: custom test2
-        uses : org/custom-action/.github/action2/@master
+        uses : custom-action/.github/action2/@master
         with:
           x: 10
           y: 5
