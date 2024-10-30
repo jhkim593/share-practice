@@ -27,6 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: custom test1
+        id : plus
         uses : jhkim593/custom-action/.github/action1/@master
         with :
           x: 10
@@ -37,6 +38,10 @@ jobs:
         with:
           x: 10
           y: 5
+
+      - name: result
+        run: |
+          echo "sum result is ${ { steps.plus.outputs.sum-result } }"
 
       - name: run
         id : run
