@@ -34,6 +34,7 @@ jobs:
           y: 5
 
       - name: custom test2
+        id : c
         uses : jhkim593/custom-action/.github/action2/@master
         with:
           x: 10
@@ -42,6 +43,11 @@ jobs:
       - name: result
         run: |
           echo "sum result is ${ { steps.plus.outputs.sum-result } }"
+
+      - name: result
+        run: |
+          echo "max result is ${ { steps.max.outputs.sum-result } }"
+
 
       - name: run
         id : run
