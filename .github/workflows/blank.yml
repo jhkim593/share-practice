@@ -42,11 +42,11 @@ jobs:
 
       - name: result
         run: |
-          echo "sum result is ${ { steps.plus.outputs.sum-result } }"
+          echo "sum result is ${{steps.plus.outputs.sum-result}}"
 
       - name: result
         run: |
-          echo "max result is ${ { steps.max.outputs.sum-result } }"
+          echo "max result is ${{steps.max.outputs.sum-result}}"
 
 
       - name: run
