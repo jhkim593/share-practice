@@ -25,7 +25,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      # Runs a single command using the runners shell
+      # Runs a single command using  the runners shell
       - name: custom test1
         id : plus
         uses : jhkim593/custom-action/.github/action1/@master
@@ -34,7 +34,7 @@ jobs:
           y: 5
 
       - name: custom test2
-        id : c
+        id : max
         uses : jhkim593/custom-action/.github/action2/@master
         with:
           x: 10
