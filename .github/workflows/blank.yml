@@ -79,7 +79,7 @@ jobs:
         uses: Kaven-Universe/github-action-current-date-time@v1
         with:
           format: "YYYYMMDDHHmmss"
-          timezone-offset: -480
+          timezone-offset: -540
 
       - name: Output1
         run: |
