@@ -76,12 +76,23 @@ jobs:
 
       - name: Get current date
         id: date
-        # run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
-        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+        uses: Kaven-Universe/github-action-current-date-time@v1
+        with:
+          format: "YYYYMMDDHHmmss"
 
-      - name: Test with environment variables
-        run: echo $date
-        env:
-          TAG_NAME: tag - $date
-          RELEASE_NAME: release -$date
+      - name: Output1
+        run: |
+          echo "The time was ${{ steps.date.outputs.time }}"
+        
+
+      # - name: Get current date
+      #   id: date
+      #   # run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+      #   run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+      # - name: Test with environment variables
+      #   run: echo $date
+      #   env:
+      #     TAG_NAME: tag - $date
+      #     RELEASE_NAME: release -$date
 
