@@ -34,7 +34,7 @@ jobs:
 
       - name: result
         run: |
-          echo $API_KEY
+          echo $API_ENDPOINT
 
       # Runs a single command using  the runners shell
       - name: custom test1
