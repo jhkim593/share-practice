@@ -27,6 +27,15 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+
+      - uses: actions/checkout@v4
+        with:
+          repository: jhkim593/custom-action
+      # 파일 읽기 및 출력
+      - name: Read file from another repository
+        run: |
+          cat config.yml
+
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
