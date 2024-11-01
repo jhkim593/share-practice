@@ -36,17 +36,17 @@ jobs:
         run: |
           cat config.yml
 
+      - name: Load each line to GitHub Actions Environment
+        run: |
+          while IFS= read -r line || [[ -n "$line" ]]; do
+            echo "$line" >> $GITHUB_ENV
+          done < config.yml
+
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      - name: 'Create env file'
-        run: |
-          echo "API_ENDPOINT=https://xxx.execute-api.us-west-2.amazonaws.com \n test=test2" >> $GITHUB_ENV
-          cat .env
-
       - name: result
         run: |
-          echo $API_ENDPOINT
           echo $test
 
       # Runs a single command using  the runners shell
